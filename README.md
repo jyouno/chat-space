@@ -47,3 +47,7 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## インデックスの設定
+
+- add_index :users, :name
