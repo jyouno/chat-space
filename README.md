@@ -1,4 +1,4 @@
-#DB設計
+# DB設計
 
 ## membersテーブル
 
@@ -7,7 +7,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 - belongs_to :group
 - belongs_to :user
 
@@ -19,23 +19,23 @@
 |e-mail|string|null: false|
 |password|string|null: false|
 
-###Association
+### Association
 - has_many :messages
 - has_many :members
 - has_many :groups, through: :members
 
-##groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |group-name|string|null: false|
 
-###Association
+### Association
 - has_many :messages
 - has_many :members
 - has_many :users, through: :members
 
-##messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -44,6 +44,6 @@
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 
-###Association
+### Association
 - belongs_to :group
 - belongs_to :user
