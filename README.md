@@ -16,8 +16,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|e-mail|string|null: false|
-|password|string|null: false|
+|e-mail|string|null: false, unique: true|
+|password|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
@@ -40,9 +40,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|image|string|""|
-|group_id|integer|null: false|
-|user_id|integer|null: false|
+|image|string||
+|group_id|integer|null: false, foregin_key: true|
+|user_id|integer|null: false, foregin_key: true|
 
 ### Association
 - belongs_to :group
