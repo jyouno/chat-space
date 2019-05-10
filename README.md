@@ -26,7 +26,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group-name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
