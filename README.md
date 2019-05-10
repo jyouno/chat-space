@@ -41,8 +41,8 @@
 |------|----|-------|
 |body|text|null: false|
 |image|string||
-|group_id|integer|null: false, foregin_key: true|
-|user_id|integer|null: false, foregin_key: true|
+|group_id|reference|null: false, foregin_key: true|
+|user_id|reference|null: false, foregin_key: true|
 
 ### Association
 - belongs_to :group
