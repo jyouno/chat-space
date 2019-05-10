@@ -37,7 +37,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |group_id|reference|null: false, foregin_key: true|
 |user_id|reference|null: false, foregin_key: true|
