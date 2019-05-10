@@ -16,8 +16,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|e-mail|string|null: false, unique: true|
-|password|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
