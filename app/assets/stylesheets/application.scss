@@ -1,0 +1,43 @@
+
+@import "font-awesome";
+@import "./reset";
+
+.wrapper {
+  position: fixed;
+.left-content {
+  height: 100vh;
+  width: 300px;
+  .left-content-top {
+    padding: 0 20px;
+    height: 96px;
+    background-color: #253141;
+    position: relative;
+    .user-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+       }
+    }
+  }
+  .left-content-bottom {
+    padding: 20px 20px 0 20px;
+    height: 100%;
+    background-color: #2f3e51;
+      .group {
+        color: #ffffff;
+        font-weight: bold;
+        padding-bottom: 40px;
+        .test-group {
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        .test-coment {
+          font-size: 11px;
+        }
+      }
+  }
+}
+}
