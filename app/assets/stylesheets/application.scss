@@ -4,8 +4,11 @@
 
 .wrapper {
   position: fixed;
+  height: 100vh;
+  width: 100vw;
   .left-content {
     float: left;
+    display: inline-block;
     height: 100vh;
     width: 300px;
     &__top {
@@ -55,11 +58,16 @@
   }
 //↓right content
   .right-content {
+    float: left;
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 300px);
     &__top {
+      padding: 0 40px;
       height: 82px;
       border-bottom: thin solid #eeeeee;
+      &__group {
+
+      }
     }
     &__main {
       height: 80%;
