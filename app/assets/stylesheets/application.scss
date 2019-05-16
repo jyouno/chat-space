@@ -12,17 +12,23 @@
     height: 96px;
     background-color: #253141;
     position: relative;
-    .user-name {
-      font-weight: bold;
-      font-size: 16px;
-      color: #ffffff;
+    .left-content-top__box {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-       }
-       .icon__white {
+        top: 50%;
+        transform: translateY(-50%);
+      .user-name {
+        float: left;
+        font-weight: bold;
+        font-size: 16px;
         color: #ffffff;
-       }
+        }
+      .link-box li {
+        display: inline-block;
+        .icon__white {
+          color: #ffffff;
+        }
+      }
+      }
        }
     }
   .left-content-bottom {
