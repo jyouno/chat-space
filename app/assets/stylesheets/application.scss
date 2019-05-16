@@ -13,17 +13,21 @@
     background-color: #253141;
     position: relative;
     .left-content-top__box {
+      width: 260px;
       position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+      top: 50%;
+      transform: translateY(-50%);
       .user-name {
         float: left;
         font-weight: bold;
         font-size: 16px;
         color: #ffffff;
         }
-      .link-box li {
+      .link-box {
+        float: right;
+        li {
         display: inline-block;
+        }
         .icon__white {
           color: #ffffff;
         }
