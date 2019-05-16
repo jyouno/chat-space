@@ -65,15 +65,32 @@
       padding: 0 40px;
       height: 100px;
       border-bottom: thin solid #eeeeee;
-      &__group {
-        padding-top: 35px;
-        font-size: 20px;
-        color: #333333;
+      &__left-box {
+        float: left;
+        &__group {
+          padding-top: 35px;
+          font-size: 20px;
+          color: #333333;
+        }
+        &__member {
+          padding-top: 15px;
+          font-size: 12px;
+          color: #999999;
+        }
       }
-      &__member {
-        padding-top: 15px;
-        font-size: 12px;
-        color: #999999;
+      &__right-box {
+        float: right;
+        padding-top: 28px;
+        a {
+          text-decoration: none;
+        }
+        &__btn {
+          color: #38AEF0;
+          line-height: 40px;
+          height: 40px;
+          padding: 0 20px;
+          border: thin solid #38AEF0;
+        }
       }
     }
     &__main {
