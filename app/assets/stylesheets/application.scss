@@ -4,8 +4,6 @@
 
 .wrapper {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
   .left-content {
     float: left;
     display: inline-block;
@@ -94,7 +92,7 @@
       }
     }
     &__main {
-      height: 80%;
+      height: calc(100vh - 246px);
       background-color: #fafafa;
       padding: 46px 40px 0 40px;
       &__user-name {
@@ -118,8 +116,21 @@
 
     }
     &__bottom {
-      height: 20%;
+      height: 100px;
+      padding: 0 40px;
       background-color: rgb(207, 204, 204);
+      position: relative;
+      &__textarea {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .text-box {
+          height: 50px;
+          width: 100%;
+          padding: 0 10px;
+        }
+      }
     }
   }
 }
