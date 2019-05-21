@@ -13,8 +13,7 @@
     .left-content__bottom
       /↓他ファイルにする
       .left-content__bottom__group
-        %p.left-content__bottom__group__group-name test-group
-        %p.left-content__bottom__group__coment test-coment
+        = render "group"
 
   .right-content
     .right-content__top
@@ -25,9 +24,7 @@
         %a{href: ''}
           .right-content__top__right-box__btn Edit
     .right-content__main
-      .right-content__main__user-name test-name
-      .right-content__main__day test-day
-      .right-content__main__coment test-coment
+      = render "coment"
     .right-content__bottom
       %form.right-content__bottom__textarea
         .right-content__bottom__textarea__left-box
