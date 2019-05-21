@@ -29,5 +29,10 @@
       .right-content__main__day test-day
       .right-content__main__coment test-coment
     .right-content__bottom
-      .right-content__bottom__textarea
-        %input{type: 'text', placeholder: 'type a message',class: 'text-box'}
+      %form.right-content__bottom__textarea
+        .right-content__bottom__textarea__left-box
+          %input{type: 'text', placeholder: 'type a message',class: 'right-content__bottom__textarea__left-box--textarea'}
+          %label{for: '', class: 'right-content__bottom__textarea__left-box--icon'}
+            %i.fa.fa-image
+        %input{type: 'submit', value: 'Send', class: 'right-content__bottom__textarea__send-btn'}
+           
