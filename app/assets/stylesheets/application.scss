@@ -4,11 +4,7 @@
 @import "variables";
 
 .wrapper {
-  .make-group {
-    text-align: center;
-    background-color: $color-bule;
-    color: $font-white;
-  }
+  @import "make-group";
   .left-content {
     float: left;
     display: inline-block;
