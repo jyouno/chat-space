@@ -1,0 +1,36 @@
+.wrapper
+  .make-group グループを作成しました
+  .left-content
+    .left-content__top
+      .left-content__top__box
+        %p.left-content__top__box__user-name test-name
+        %ul.left-content__top__box__link-box
+          %li.left-content__top__box__link-box__new-group
+            = link_to '#' do
+              %i.fa.fa-edit.icon__white
+          %li.left-content__top__box__link-box__edit-user
+            = link_to '#' do
+              %i.fa.fa-cog.icon__white
+    .left-content__bottom
+      .left-content__bottom__group
+        = render "group"
+
+  .right-content
+    .right-content__top
+      .right-content__top__left-box
+        %p.right-content__top__left-box__group test-group
+        %p.right-content__top__left-box__member Member : test
+      .right-content__top__right-box
+        = link_to '#' do
+          .right-content__top__right-box__btn Edit
+    .right-content__main
+      = render "coment"
+    .right-content__bottom
+      %form.right-content__bottom__textarea
+        .right-content__bottom__textarea__left-box
+          %input{type: 'text', placeholder: 'type a message',class: 'right-content__bottom__textarea__left-box--textarea'}
+          %label{for: "upload-icon", class: 'right-content__bottom__textarea__left-box--icon'}
+            %i.fa.fa-image
+              %input{type: 'file', id: 'upload-icon'}
+        %input{type: 'submit', value: 'Send', class: 'right-content__bottom__textarea__send-btn'}
+           
