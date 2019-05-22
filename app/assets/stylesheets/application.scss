@@ -6,7 +6,5 @@
 .wrapper {
   @import "make-group";
   @import "left-content";
-
-//↓right content
   @import "right-content";
 }
