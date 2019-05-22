@@ -6,13 +6,12 @@
         %p.left-content__top__box__user-name test-name
         %ul.left-content__top__box__link-box
           %li.left-content__top__box__link-box__new-group
-            %a{href: ''}
+            = link_to '#' do
               %i.fa.fa-edit.icon__white
           %li.left-content__top__box__link-box__edit-user
-            %a{href: ''}
+            = link_to '#' do
               %i.fa.fa-cog.icon__white
     .left-content__bottom
-      /↓他ファイルにする
       .left-content__bottom__group
         = render "group"
 
@@ -22,7 +21,7 @@
         %p.right-content__top__left-box__group test-group
         %p.right-content__top__left-box__member Member : test
       .right-content__top__right-box
-        %a{href: ''}
+        = link_to '#' do
           .right-content__top__right-box__btn Edit
     .right-content__main
       = render "coment"
