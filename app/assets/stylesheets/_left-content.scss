@@ -1,0 +1,49 @@
+.left-content {
+  float: left;
+  display: inline-block;
+  width: 300px;
+  &__top {
+    padding: 0 20px;
+    height: 100px;
+    background-color: #253141;
+    position: relative;
+    &__box {
+      width: 260px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &__user-name {
+        float: left;
+        font-weight: bold;
+        font-size: 16px;
+        color: $font-white;
+      }
+      &__link-box {
+        float: right;
+        li {
+        display: inline-block;
+        }
+        .icon__white {
+          color: $font-white;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 20px 20px 0 20px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+      &__group {
+        color: $font-white;
+        font-weight: bold;
+        padding-bottom: 40px;
+        &__group-name {
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        &__coment {
+          font-size: 11px;
+        }
+      }
+  }
+}
