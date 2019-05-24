@@ -3,13 +3,14 @@
   .left-content
     .left-content__top
       .left-content__top__box
-        %p.left-content__top__box__user-name test-name
+        %p.left-content__top__box__user-name
+          = current_user.name
         %ul.left-content__top__box__link-box
           %li.left-content__top__box__link-box__new-group
             = link_to '#' do
               %i.fa.fa-edit.icon__white
           %li.left-content__top__box__link-box__edit-user
-            = link_to '#' do
+            = link_to edit_user_path(current_user) do
               %i.fa.fa-cog.icon__white
     .left-content__bottom
       .left-content__bottom__group
