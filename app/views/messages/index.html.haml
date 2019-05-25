@@ -6,7 +6,7 @@
           = current_user.name
         %ul.left-content__top__box__link-box
           %li.left-content__top__box__link-box__new-group
-            = link_to '#' do
+            = link_to new_group_path do
               %i.fa.fa-edit.icon__white
           %li.left-content__top__box__link-box__edit-user
             = link_to edit_user_path(current_user) do
