@@ -4,9 +4,9 @@
 @import "variables";
 @import "user";
 @import "flash";
+@import "group";
 
 .wrapper {
-  @import "make-group";
   @import "left-content";
   @import "right-content";
 }
