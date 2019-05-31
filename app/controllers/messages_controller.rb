@@ -4,4 +4,6 @@ class MessagesController < ApplicationController
     @groupname = Group.find(2)
   end
   
+  def create
+  end
 end
