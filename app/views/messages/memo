@@ -1,0 +1,7 @@
+%form.right-content__bottom__textarea
+        .right-content__bottom__textarea__left-box
+          %input{type: 'text', placeholder: 'type a message',class: 'right-content__bottom__textarea__left-box--textarea'}
+          %label{for: "upload-icon", class: 'right-content__bottom__textarea__left-box--icon'}
+            %i.fa.fa-image
+              %input{type: 'file', id: 'upload-icon'}
+        %input{type: 'submit', value: 'Send', class: 'right-content__bottom__textarea__send-btn'}

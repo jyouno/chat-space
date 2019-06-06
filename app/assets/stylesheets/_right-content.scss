@@ -62,33 +62,36 @@
   &__bottom {
     padding: 20px 40px;
     background-color: rgb(207, 204, 204);
-    &__textarea {
-      display: flex;
-      &__left-box {
+    .form {
+      .new_message {
         width: 100%;
         position: relative;
-        &--textarea {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: $font-black;
-          border: none;
-          box-sizing: border-box;
+        display: flex;
+        .form__box {
+          position :relative; 
+          width :100%;
+          .form__message {
+            height: 50px;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            color: $font-black;
+            border: none;
+            box-sizing: border-box;
+          }
+          .form__mask__image {
+            color: black;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            input {
+              display: none;
+            }
+            }
         }
-        &--icon {
-          color: black;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          input {
-            display: none;
-          }
-          }
       }
-      &__send-btn {
+      .form__submit {
         margin-left: 15px;
-        float: left;
         height: 50px;
         width: 100px;
         padding: 0 30px;
