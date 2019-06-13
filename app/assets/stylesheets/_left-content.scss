@@ -1,5 +1,5 @@
 .left-content {
-  float: left;
+  height: 100vh;
   display: inline-block;
   width: 300px;
   &__top {
@@ -30,8 +30,9 @@
     }
   }
   &__bottom {
-    padding: 20px 20px 0 20px;
-    height: calc(100vh - 100px);
+    overflow: auto;
+    padding: 20px;
+    height: calc(100vh - 140px);
     background-color: #2f3e51;
       &__group {
         color: $font-white;

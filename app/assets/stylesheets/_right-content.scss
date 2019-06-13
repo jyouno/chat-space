@@ -1,5 +1,5 @@
 .right-content {
-  float: left;
+  float: right;
   width: calc(100vw - 300px);
   &__top {
     padding: 0 40px;
@@ -35,6 +35,8 @@
     }
   }
   &__main {
+    overflow: auto;
+    
     box-sizing: border-box;
     height: calc(100vh - 170px);
     background-color: #fafafa;
@@ -62,6 +64,9 @@
 
   }
   &__bottom {
+    position: absolute;
+    bottom: 0;
+    width: calc(100vw - 380px);
     padding: 20px 40px;
     background-color: rgb(207, 204, 204);
     .form {
