@@ -1,9 +1,10 @@
-.right-content__main__user-name
-  = message.user.name
-.right-content__main__day
-  = message.created_at.strftime("%Y/%m/%d %H:%M")
-.right-content__main__coment
-  - if message.content.present?
-    %p.lower-message__content
-      = message.content
-  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+.right-content__main__message
+  .right-content__main__message__user-name
+    = message.user.name
+  .right-content__main__message__day
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .right-content__main__message__coment
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
