@@ -41,6 +41,11 @@ $(function(){
     .done(function(data){
       var html = createMsg(data);
       $('.right-content__main').append(html)
+      $(function(){
+        $('.right-content__main').animate({
+          scrollTop: $('.last').offset().top
+        }, 1500);
+      })
     })
     .fail(function(){
 
