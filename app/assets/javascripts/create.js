@@ -1,4 +1,5 @@
 $(function(){
+  $('.form__submit').removeAttr('data-disable-with disabled');
   function createMsg(data){
     function displyImg(data){
       if ( data.image != null ) {
@@ -8,7 +9,6 @@ $(function(){
       }
       return img
     }
-
     var html = `<div class="right-content__main__message">
                 <div class="right-content__main__message__user-name">
                 ${data.user}
@@ -48,7 +48,7 @@ $(function(){
       })
     })
     .fail(function(){
-
+      alert('メッセージの送信に失敗しました');
     })
-  })
+  });
 });

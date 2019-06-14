@@ -8,10 +8,13 @@ class MessagesController < ApplicationController
   
   def create
     @message = @group.messages.new(message_params)
+    @message.save
     respond_to do |format|
-      format.html 
+      format.html {
+        redirect_to root_path
+      }
       format.json {
-        @message.save
+        render 'create.json.jbuilder'
       }
     end
     

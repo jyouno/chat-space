@@ -1,5 +1,5 @@
 .wrapper
-  = render 'groups/group' 
+  = render 'group' 
 
   .right-content
     .right-content__top
@@ -15,7 +15,7 @@
           .right-content__top__right-box__btn Edit
     .right-content__main
       = render @messages
-      .last
+      .last  
     .right-content__bottom
       .form
         = form_for [@group, @message] do |f|
