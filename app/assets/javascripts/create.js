@@ -35,8 +35,13 @@ $(function(){
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
+    if ($('.form__message').val() == "" && $('.hidden').val() == "") {
+      alert('メッセージを入力して下さい')
+      return false
+    } else {
     var formData = new FormData(this);
     var url = $(this).attr('action');
+    }
     $.ajax({
       url: url,
       type: 'POST',
@@ -50,6 +55,7 @@ $(function(){
       $('.right-content__main').append(html)
       scrollBottom()
       $('.form__message').val('')
+      $('.hidden').val('')
     })
     .fail(function(){
       alert('メッセージの送信に失敗しました');

@@ -14,7 +14,6 @@ class MessagesController < ApplicationController
         render 'create.json.jbuilder'
       }
     end
-    
   end
 
 private
