@@ -48,7 +48,8 @@ $(function(){
     .done(function(data){
       var html = createMsg(data);
       $('.right-content__main').append(html)
-      scrollBottom();
+      scrollBottom()
+      $('.form__message').val('')
     })
     .fail(function(){
       alert('メッセージの送信に失敗しました');
