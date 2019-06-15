@@ -1,5 +1,6 @@
 $(function(){
   $('.form__submit').removeAttr('data-disable-with disabled');
+  
   function createMsg(data){
     function displyImg(data){
       if ( data.image != null ) {
@@ -26,6 +27,12 @@ $(function(){
   return html
                 }
 
+  function scrollBottom() {
+    $('.right-content__main').animate({
+      scrollTop: $('.right-content__main')[0].scrollHeight
+    }, 1500);
+  }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -41,11 +48,7 @@ $(function(){
     .done(function(data){
       var html = createMsg(data);
       $('.right-content__main').append(html)
-      $(function(){
-        $('.right-content__main').animate({
-          scrollTop: $('.last').offset().top
-        }, 1500);
-      })
+      scrollBottom();
     })
     .fail(function(){
       alert('メッセージの送信に失敗しました');
