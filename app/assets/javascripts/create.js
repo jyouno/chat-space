@@ -54,8 +54,7 @@ $(function(){
       var html = createMsg(data);
       $('.right-content__main').append(html)
       scrollBottom()
-      $('.form__message').val('')
-      $('.hidden').val('')
+      $('.new_message')[0].reset()
     })
     .fail(function(){
       alert('メッセージの送信に失敗しました');
