@@ -10,7 +10,7 @@ $(function(){
       }
       return img
     }
-    var html = `<div class="right-content__main__message">
+    var html = `<div class="right-content__main__message" data-messageid='${data.messageid}'>
                 <div class="right-content__main__message__user-name">
                 ${data.user}
                 </div>
