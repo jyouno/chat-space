@@ -14,7 +14,7 @@
             %i.fa.fa-cog.icon__white
   .left-content__bottom
     - current_user.groups.each do |group|
-      = link_to 'group_messages_path(group)' do
+      = link_to group_messages_path(group) do
         .left-content__bottom__group
           .left-content__bottom__group__group-name
             = group.name
