@@ -7,7 +7,6 @@ class Api::MessagesController < ApplicationController
     respond_to do |format|
       format.json { 
         @new_message = @group.messages.where('id > ?', params[:id]) 
-        render 'index.json.jbuilder'
       }
     end
   end

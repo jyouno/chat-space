@@ -4,11 +4,7 @@ $(window).bind("load", function(){
 $(function(){
   function createLoadMsg(data){
     function displyImg(data){
-      if ( data.image != null ) {
-        var img = `<img class="lower-message__image" src='${data.image}'>`
-      } else {
-        var img = "";
-      }
+      var img = data.image != null  ?  `<img class="lower-message__image" src='${data.image}'>` : "";
       return img
     }
     var html = `<div class="right-content__main__message" data-messageid='${data.messageid}'>
