@@ -3,7 +3,7 @@ $(function(){
   function nameList(data){
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${data.name}</p>
-                  <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="ユーザーのid" data-user-name="ユーザー名">追加</div>
+                  <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${data.id}" data-user-name="${data.name}">追加</div>
                 </div>`;
     return html
   }
@@ -11,6 +11,15 @@ $(function(){
   function noName(data){
     console.log(data)
     var html = `<div>${data}</div>`;
+    return html
+  }
+
+  function memberList(id, name){
+    var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+                  <input name='group[user_ids][]' type='hidden' value='${id}'>
+                  <p class='chat-group-user__name'>${name}</p>
+                  <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
+                </div>`;
     return html
   }
 
@@ -37,8 +46,15 @@ $(function(){
     .fail(function(){
       arelt('ユーザー検索に失敗しました');
     })
-
   })
 
+  $(document).on("click", '.user-search-add', function(){
+    var id = $(this).data('userId');
+    var name = $(this).data('userName');
+    var html = memberList(id,name);
+    $('#chat-group-users').append(html)
+    $(this).parent('.chat-group-user').remove();
+  })
+  
 
 });
