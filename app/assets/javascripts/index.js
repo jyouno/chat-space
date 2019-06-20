@@ -52,6 +52,7 @@ $(function(){
 
   $(document).on("click", '.js-remove-btn', function(){
     $(this).parent('.chat-group-user').remove();
+
   })
 
 });
