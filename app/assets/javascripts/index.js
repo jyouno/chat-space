@@ -8,12 +8,6 @@ $(function(){
     return html
   }
 
-  function noName(data){
-    console.log(data)
-    var html = `<div>${data}</div>`;
-    return html
-  }
-
   function memberList(id, name){
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
@@ -55,6 +49,9 @@ $(function(){
     $('#chat-group-users').append(html)
     $(this).parent('.chat-group-user').remove();
   })
-  
+
+  $(document).on("click", '.js-remove-btn', function(){
+    $(this).parent('.chat-group-user').remove();
+  })
 
 });

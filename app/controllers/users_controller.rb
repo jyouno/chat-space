@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @user = @users.where.not(id: current_user.id)
     respond_to do |format|
       format.json{
         render 'index.json.jbuilder'
